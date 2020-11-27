@@ -1,0 +1,99 @@
+@import "toggleSwitch.css";
+
+:root {
+  /* Space */
+  --space-s: 1rem;
+  --space-m: 1.5rem;
+  --space-l: 2rem;
+  --space-xl: 2.5rem;
+  --space-xxl: 3rem;
+  /* Inset (e.g. Padding) */
+  --inset-s: 1rem;
+  --inset-m: 1.5rem;
+  --inset-l: 2rem;
+  --inset-xl: 2.5rem;
+  --inset-xxl: 3rem;
+  /* Outset (e.g. Margin) */
+  --outset-s: 1rem;
+  --outset-m: 1.5rem;
+  --outset-l: 2rem;
+  --outset-xl: 2.5rem;
+  --outset-xxl: 3rem;
+  /* Colours */
+  --dark-mode-background-colour: #202020;
+  --light-mode-background-colour: #ececec;
+  --dark-mode-text-colour: white;
+  --light-mode-text-colour: #202020;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: Arial;
+  background-color: var(--light-mode-background-colour);
+  color: var(--light-mode-text-colour);
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.container header {
+  flex: 0 1 auto;
+  /* The above is shorthand for:
+  flex-grow: 0,
+  flex-shrink: 1,
+  flex-basis: auto
+  */
+}
+
+.container main {
+  flex: 1 1 auto;
+}
+
+html,
+body.dark-mode {
+  background-color: var(--dark-mode-background-colour);
+  color: var(--dark-mode-text-colour);
+}
+
+h1 {
+  font-size: var(--space-xl);
+}
+
+div.m-s {
+  margin: var(--outset-s);
+}
+
+.mr-s {
+  margin-right: var(--outset-s);
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.v-centered {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.maze {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 100%;
+  border-radius: 2rem;
+  margin: var(--outset-xl);
+}
+
+body.dark-mode .maze {
+  background-color: #303030;
+}
